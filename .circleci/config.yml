@@ -8,7 +8,7 @@ workflows:
       - cypress/run:
           yarn: true
           command: yarn test
-          executor: cypress/base-14
+          executor: cypress/base-16
       - heroku/deploy-via-git:
           requires:
           - cypress/run
