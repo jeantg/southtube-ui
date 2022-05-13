@@ -1,0 +1,9 @@
+{
+    "component": {
+      "componentFolder": "cypress/unit",
+      "testFiles": "**/*.test.{jsx,tsx}",
+      "viewportHeight": 1080,
+      "viewportWidth": 1920
+    }
+  }
+  

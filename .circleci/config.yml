@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+  heroku: circleci/heroku@0.0.10
+  cypress: cypress-io/cypress@1
+workflows:
+  test:
+    jobs:
+      - cypress/run:
+          command: yarn test
+  heroku_deploy:
+    jobs:
+      - heroku/deploy-via-git:
+        requires:
+          - test
