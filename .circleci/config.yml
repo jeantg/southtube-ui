@@ -3,12 +3,10 @@ orbs:
   heroku: circleci/heroku@0.0.10
   cypress: cypress-io/cypress@1
 workflows:
-  test:
+  test_and_heroku_deploy:
     jobs:
       - cypress/run:
           command: yarn test
-  heroku_deploy:
-    jobs:
       - heroku/deploy-via-git:
-        requires:
-          - test
+          requires:
+          - cypress/run
