@@ -6,6 +6,7 @@ workflows:
   test_and_heroku_deploy:
     jobs:
       - cypress/run:
+          yarn: true
           command: yarn test
       - heroku/deploy-via-git:
           requires:
