@@ -2,13 +2,17 @@ version: 2.1
 orbs:
   heroku: circleci/heroku@0.0.10
   cypress: cypress-io/cypress@1
+executors:
+  with-chrome:
+    docker:
+      - image: 'cypress/browsers:node16.14.0-chrome99-ff97'
 workflows:
   test_and_heroku_deploy:
     jobs:
       - cypress/run:
           yarn: true
           command: yarn test
-          executor: cypress/base-16.0.0
+          executor: with-chrome
       - heroku/deploy-via-git:
           requires:
           - cypress/run
