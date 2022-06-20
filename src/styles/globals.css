@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  [type='text'] {
+    @apply focus:!ring-offset-0 focus:!ring-transparent focus:!outline-none border-none 
+  }
+}
+
 html,
 body {
   padding: 0;
