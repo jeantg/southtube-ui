@@ -8,7 +8,8 @@ const useSearch = () => {
 
   return {
     titles,
-    debounced
+    debounced,
+    setTitles
   };
 };
 
