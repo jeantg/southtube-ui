@@ -1,7 +1,7 @@
 module.exports = {
-  content: ["./src/**/*.{ts,tsx}", "./public/index.html"],
+  content: ['./src/**/*.{ts,tsx}', './public/index.html'],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')]
 };
