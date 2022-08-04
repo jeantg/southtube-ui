@@ -1,13 +1,15 @@
 import type { NextPage } from 'next';
 import FilterBar from '../components/FilterBar';
 import Header from '../components/Header';
+import { Sidebar } from "../components/Sidebar/sidebar";
+
 const Home: NextPage = () => {
   return (
-    <>
-      <Header />
+    <div className="w-full">
+    <Header />
       <FilterBar />
-      <div className='w-full'>Home</div>
-    </>
+      <Sidebar />
+    </div>
   );
 };
 export default Home;
