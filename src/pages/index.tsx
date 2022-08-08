@@ -8,15 +8,10 @@ const Home: NextPage = () => {
   return (
     <div className="w-full flex">
       <Sidebar />
-
       <div className='flex-col'>
         <Header />
         <FilterBar />
-
-        
-          <CardList />
- 
-
+        <CardList />
       </div>
     </div>
   );
