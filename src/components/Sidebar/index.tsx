@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { openSidebarItems } from "./enum";
 
-export const Sidebar = () => {
+const Sidebar = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
 
   const handleOpenSidebar = () => {
@@ -10,7 +10,7 @@ export const Sidebar = () => {
   };
 
   return (
-    <aside className={`bg-white fixed h-screen flex flex-col ${openSidebar && "top w-[72px] items-center"}`}>
+    <aside className={`bg-white h-screen flex flex-col ${openSidebar && "top w-[72px] items-center"}`}>
       <button className={`${openSidebar ? "mt-4" : "mt-4 ml-6"}`} onClick={handleOpenSidebar}><AiOutlineMenu size={24} /></button>
       <div className={` mt-6 ${openSidebar ? "w-full" : "w-60 overflow-y-auto scrollbar"}`}>
         {openSidebarItems.map(item =>
@@ -27,3 +27,5 @@ export const Sidebar = () => {
     </aside>
   )
 }
+
+export default Sidebar;
