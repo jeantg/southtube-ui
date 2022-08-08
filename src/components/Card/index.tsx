@@ -12,7 +12,7 @@ type CardItemProps = {
 
 const Card = ({ cardItem }: CardItemProps) => {
   return (
-    <div className="h-[300px] w-[360px] flex-col">
+    <div className="h-[300px] w-[360px] flex-col hover:scale-110 hover:border-2">
       <Image
         src="/assets/next.png"
         alt="Logo do Jobii"
@@ -20,7 +20,7 @@ const Card = ({ cardItem }: CardItemProps) => {
         height={202}
         className="cursor-pointer"
       />
-      <div className="flex gap-4 mt-2">
+      <div className="flex gap-8  p-2">
         <div className="bg-black rounded-full w-9 h-9">
         </div>
         <div>

@@ -6,16 +6,16 @@ import CardList from "../components/CardList";
 
 const Home: NextPage = () => {
   return (
-    <div className="w-full">
-      <Header />
-      <FilterBar />
-      <div className='flex'>
-        <Sidebar />
+    <div className="w-full flex">
+      <Sidebar />
 
-        <div className='p-10'>
+      <div className='flex-col'>
+        <Header />
+        <FilterBar />
+
+        
           <CardList />
-        </div>
-
+ 
 
       </div>
     </div>
